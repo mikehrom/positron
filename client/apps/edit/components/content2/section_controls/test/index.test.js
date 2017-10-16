@@ -4,8 +4,8 @@ import { mount } from 'enzyme'
 import Channel from '/client/models/channel.coffee'
 import Section from '/client/models/section.coffee'
 import SectionControls from '../index.jsx'
-import { Fixtures } from '@artsy/reaction-force/dist/Components/Publishing'
-const { StandardArticle, FeatureArticle } = Fixtures
+import components from '@artsy/reaction-force/dist/Components/Publishing/index'
+const { StandardArticle, FeatureArticle } = components.Fixtures
 
 describe('Section Controls', () => {
   beforeAll(() => {

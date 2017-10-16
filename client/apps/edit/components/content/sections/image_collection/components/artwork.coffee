@@ -1,6 +1,6 @@
 React = require 'react'
-{ Artwork } = require('@artsy/reaction-force/dist/Components/Publishing')
-Artwork = React.createFactory Artwork
+components = require('@artsy/reaction-force/dist/Components/Publishing/index').default
+Artwork = React.createFactory components.Artwork
 icons = -> require('../../../../icons.jade') arguments...
 { div, span, img, button, p, strong } = React.DOM
 

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import {
-  IconLayoutFullscreen,
-  IconLayoutSplit,
-  IconLayoutText
- } from '@artsy/reaction-force/dist/Components/Publishing'
+import components from '@artsy/reaction-force/dist/Components/Publishing/index'
+
+const IconFullscreen = components.Icon.LayoutFullscreen
+const IconSplit = components.Icon.LayoutSplit
+const IconText = components.Icon.LayoutText
 
 export default class FeatureHeaderControls extends Component {
   constructor (props) {
@@ -28,19 +28,19 @@ export default class FeatureHeaderControls extends Component {
           <a
             onClick={this.onChangeLayout}
             name='text'>
-            <IconLayoutText />
+            <IconText />
             Default
           </a>
           <a
             onClick={this.onChangeLayout}
             name='fullscreen'>
-            <IconLayoutFullscreen />
+            <IconFullscreen />
             Overlay
           </a>
           <a
             onClick={this.onChangeLayout}
             name='split'>
-            <IconLayoutSplit />
+            <IconSplit />
             Split
           </a>
         </div>
@@ -53,8 +53,8 @@ export default class FeatureHeaderControls extends Component {
       return (
         <div
           onClick={this.toggleLayoutControls}
-          className='edit-header--controls__bg'
-        />
+          className='edit-header--controls__bg'>
+        </div>
       )
     }
   }

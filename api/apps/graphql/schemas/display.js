@@ -1,13 +1,11 @@
 import Joi from 'api/lib/joi.coffee'
 const { API_MAX, API_PAGE_SIZE } = process.env
 
-const unitSchema = Joi.object().meta({
-  name: 'DisplayUnit',
-  isTypeOf: (data) => {}
-}).keys({
+const unitSchema = Joi.object().keys({
   assets: Joi.array().items(
     Joi.object().keys({
-      url: Joi.string()
+      name: Joi.string().allow(''),
+      slug: Joi.string()
     })
   ),
   body: Joi.string(),

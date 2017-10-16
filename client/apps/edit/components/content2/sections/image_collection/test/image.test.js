@@ -1,9 +1,9 @@
 import React from 'react'
 import Backbone from 'backbone'
-import { Fixtures } from '@artsy/reaction-force/dist/Components/Publishing'
+import components from '@artsy/reaction-force/dist/Components/Publishing/index'
 import Image from '../components/image.jsx'
 import { mount } from 'enzyme'
-const { StandardArticle } = Fixtures
+const { StandardArticle } = components.Fixtures
 
 describe('Image', () => {
   const props = {

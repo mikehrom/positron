@@ -4,10 +4,11 @@ import { PlainText } from '/client/components/rich_text2/components/plain_text.j
 import SectionHeader from '../index.jsx'
 import { mount } from 'enzyme'
 
-import { Fixtures, Header } from '@artsy/reaction-force/dist/Components/Publishing'
-const ClassicArticle = Fixtures.ClassicArticle
-const FeatureArticle = Fixtures.FeatureArticle
-const StandardArticle = Fixtures.StandardArticle
+import components from '@artsy/reaction-force/dist/Components/Publishing/index'
+const Header = components.Header
+const ClassicArticle = components.Fixtures.ClassicArticle
+const FeatureArticle = components.Fixtures.FeatureArticle
+const StandardArticle = components.Fixtures.StandardArticle
 
 jest.mock('react-sizeme', () => jest.fn(c => d => d))
 
